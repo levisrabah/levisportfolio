@@ -1,9 +1,11 @@
 
 import { ArrowDown } from "lucide-react";
+import HeroBackground from "@/components/3d/HeroBackground";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16">
+      <HeroBackground />
       <div className="absolute inset-0 bg-grid-pattern opacity-[0.03] dark:opacity-[0.05] z-0"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10">

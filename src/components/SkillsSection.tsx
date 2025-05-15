@@ -1,5 +1,6 @@
 
 import { Code } from "lucide-react";
+import SkillsVisualization from "@/components/3d/SkillsVisualization";
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -32,6 +33,11 @@ const SkillsSection = () => {
     },
   ];
 
+  // Extract all skill names for the 3D visualization
+  const allSkills = skillCategories.flatMap(category => 
+    category.skills.map(skill => skill.name)
+  );
+
   return (
     <section id="skills" className="py-20">
       <div className="section-container">
@@ -40,6 +46,11 @@ const SkillsSection = () => {
             <Code className="text-primary w-6 h-6" />
           </div>
           <h2 className="section-title ml-3">Skills & Expertise</h2>
+        </div>
+
+        {/* 3D Skills Visualization */}
+        <div className="mb-16">
+          <SkillsVisualization skills={allSkills} />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
