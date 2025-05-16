@@ -12,7 +12,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center justify-center mb-6">
           <Avatar className="h-40 w-40 border-4 border-primary shadow-lg mb-6">
             <AvatarImage 
-              src="/lovable-uploads/1c6cf77e-bb11-48b1-9935-22ce3897350e.png" 
+              src="/lovable-uploads/27a27901-ca2c-493a-9ccc-b72c2441aabc.png" 
               alt="Levis profile photo" 
               className="object-cover"
             />
