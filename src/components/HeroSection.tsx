@@ -5,6 +5,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
   const roles = [
     "Backend Developer",
     "Frontend Developer",
@@ -13,11 +14,22 @@ const HeroSection = () => {
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 2000);
+    const animationInterval = setInterval(() => {
+      // Start fade out animation
+      setIsAnimating(true);
+      
+      // Change role after fade out
+      setTimeout(() => {
+        setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        // Start fade in animation
+        setIsAnimating(false);
+      }, 500); // Half of animation duration
+      
+    }, 3000); // Show each role for 3 seconds
     
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(animationInterval);
+    };
   }, []);
 
   return (
@@ -39,9 +51,13 @@ const HeroSection = () => {
             Hello, I'm Levis
           </h1>
         </div>
-        <div className="h-10 mb-8">
-          <p className="text-muted-foreground text-lg md:text-xl lg:text-2xl animate-fade-in overflow-hidden">
-            I'm a <span className="text-primary font-semibold">{roles[roleIndex]}</span>
+        <div className="h-16 mb-8 flex justify-center items-center">
+          <p className="text-muted-foreground text-lg md:text-xl lg:text-2xl">
+            I'm a <span 
+              className={`text-primary font-semibold inline-block min-w-40 transition-opacity duration-1000 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}
+            >
+              {roles[roleIndex]}
+            </span>
           </p>
         </div>
         <div className="space-x-4 animate-fade-in">
