@@ -32,6 +32,13 @@ const HeroSection = () => {
     };
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       id="hero"
@@ -61,10 +68,10 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="space-x-4 animate-fade-in">
-          <Button size="lg" className="group">
+          <Button size="lg" className="group" onClick={() => scrollToSection('projects')}>
             Projects
           </Button>
-          <Button variant="outline" size="lg" className="group">
+          <Button variant="outline" size="lg" className="group" onClick={() => scrollToSection('contact')}>
             Contact Me
           </Button>
         </div>
