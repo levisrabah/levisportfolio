@@ -14,20 +14,15 @@ const AboutSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <h3 className="section-subtitle">Get to know me</h3>
+            <h3 className="section-subtitle">Professional Summary</h3>
             <p className="mb-4 text-muted-foreground">
-              I'm a passionate Full-Stack Developer with a strong focus on backend 
-              development. I enjoy turning complex problems into simple, elegant solutions.
+              I am a full-stack software developer with a strong foundation in software engineering and telecommunications. I build impactful solutions across back-end and front-end, and thrive in dynamic, collaborative environments.
             </p>
             <p className="mb-4 text-muted-foreground">
-              As a tech enthusiast, I have a natural curiosity for learning new technologies 
-              and frameworks. I thrive in collaborative environments where I can contribute 
-              my skills while continuing to grow as a developer.
+              I'm currently pursuing a BSc in Telecommunication and Information Technology at Kenyatta University, giving me a unique perspective for solving complex technical challenges.
             </p>
             <p className="mb-4 text-muted-foreground">
-              My journey in software development began at Moringa School, where I built a solid 
-              foundation in programming principles. Now at Vambo AI, I'm applying my skills to 
-              create innovative solutions that make a real difference.
+              I've contributed through projects, community engagement, and hackathons—leveraging developer advocacy, technical content, and mentorship to grow communities and deliver value.
             </p>
           </div>
           

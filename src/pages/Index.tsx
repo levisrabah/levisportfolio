@@ -10,6 +10,8 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowUp } from "lucide-react";
+import ResumeSection from "@/components/ResumeSection";
+import LabChallengesSection from "@/components/LabChallengesSection";
 
 const Index = () => {
   // Add a grid background pattern CSS
@@ -55,8 +57,10 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        <ResumeSection />
         <SkillsSection />
         <ProjectsSection />
+        <LabChallengesSection />
         <ExperienceSection />
         <ContactSection />
       </main>

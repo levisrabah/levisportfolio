@@ -7,10 +7,10 @@ const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const roles = [
+    "Full Stack Software Developer",
+    "Developer Relations Advocate",
     "Backend Developer",
-    "Frontend Developer",
-    "Database Designer",
-    "Portfolio Website Developer"
+    "Frontend Developer"
   ];
 
   useEffect(() => {
@@ -46,7 +46,7 @@ const HeroSection = () => {
     >
       <div className="container mx-auto text-center">
         <div className="flex flex-col items-center justify-center mb-6">
-          <Avatar className="h-56 w-56 border-4 border-primary shadow-lg mb-6">
+          <Avatar className="h-40 w-40 md:h-56 md:w-56 border-4 border-primary shadow-lg mb-6">
             <AvatarImage 
               src="/lovable-uploads/27a27901-ca2c-493a-9ccc-b72c2441aabc.png" 
               alt="Levis profile photo" 
@@ -55,7 +55,7 @@ const HeroSection = () => {
             <AvatarFallback className="text-5xl">LV</AvatarFallback>
           </Avatar>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary mb-4 animate-fade-in">
-            Hello, I'm Levis
+            Hello, I'm Levis Otieno Rabah
           </h1>
         </div>
         <div className="h-16 mb-8 flex justify-center items-center">

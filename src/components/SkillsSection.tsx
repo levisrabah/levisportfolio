@@ -5,38 +5,45 @@ import SkillsVisualization from "@/components/3d/SkillsVisualization";
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "Backend Technologies",
+      title: "Languages & Frameworks",
       skills: [
         { name: "Python", level: 90, icon: "🐍" },
         { name: "Flask", level: 85, icon: "🌶️" },
-        { name: "Django", level: 80, icon: "🏆" },
-        { name: "RESTful APIs", level: 85, icon: "📡" },
+        { name: "JavaScript", level: 85, icon: "📜" },
+        { name: "React.js", level: 80, icon: "⚛️" },
+        { name: "Node.js", level: 75, icon: "🟢" },
+        { name: "Angular", level: 65, icon: "🅰️" },
+        { name: "Express.js", level: 75, icon: "🚂" },
+        { name: "HTML", level: 90, icon: "🌐" },
+        { name: "CSS", level: 85, icon: "🎨" },
       ],
     },
     {
-      title: "Frontend Technologies",
+      title: "State & Data Management",
       skills: [
-        { name: "JavaScript", level: 80, icon: "📜" },
-        { name: "React", level: 75, icon: "⚛️" },
-        { name: "HTML", level: 85, icon: "🌐" },
-        { name: "CSS", level: 80, icon: "🎨" },
-      ],
-    },
-    {
-      title: "Database & Tools",
-      skills: [
+        { name: "Redux", level: 75, icon: "🧠" },
+        { name: "Context API", level: 80, icon: "🧩" },
         { name: "SQL", level: 85, icon: "📊" },
-        { name: "MongoDB", level: 75, icon: "🍃" },
+        { name: "MySQL", level: 80, icon: "🐬" },
+        { name: "Postgres", level: 80, icon: "🐘" },
+        { name: "MongoDB", level: 70, icon: "🍃" },
+      ],
+    },
+    {
+      title: "DevOps & Tools",
+      skills: [
         { name: "Git", level: 90, icon: "🔄" },
+        { name: "GitHub", level: 90, icon: "🐙" },
+        { name: "CI/CD", level: 70, icon: "⚙️" },
         { name: "Docker", level: 70, icon: "🐳" },
+        { name: "REST/JSON/XML", level: 85, icon: "🔗" },
+        { name: "Postman", level: 80, icon: "📮" },
       ],
     },
   ];
 
   // Extract all skill names for the 3D visualization
-  const allSkills = skillCategories.flatMap(category => 
-    category.skills.map(skill => skill.name)
-  );
+  const allSkills = skillCategories.flatMap(category => category.skills.map(skill => skill.name));
 
   return (
     <section id="skills" className="py-20">

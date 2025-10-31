@@ -14,46 +14,46 @@ const ProjectsSection = () => {
     {
       title: "Drowsiness Detection System",
       description:
-        "An AI-powered system that detects driver drowsiness in real-time using computer vision and machine learning algorithms, helping prevent road accidents.",
+        "Multilingual drowsiness detection using Vambo AI API for inclusivity.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      tags: ["Python", "TensorFlow", "OpenCV", "Flask"],
+      tags: ["Python", "OpenCV", "Flask", "Vambo AI API"],
       links: {
-        github: "#",
-        demo: "#",
+        github: "https://github.com/levisrabah/Drowsiness-Detector",
+        demo: "https://drive.google.com/file/d/1bmfcJ_e-RaZVQcz5AxQobzq8nG9d_D6J/view?usp=sharing",
       },
     },
     {
-      title: "Church Ticketing App",
+      title: "Vijana Sport Management System",
       description:
-        "A mobile-friendly web application that allows churches to sell and manage event tickets, track attendance, and handle registrations for various church programs.",
+        "A platform for managing youth sports programs, handling enrollments, schedules, and communication.",
       image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
-      tags: ["React", "Node.js", "Express", "MongoDB"],
+      tags: ["Python", "Flask", "React", "HTML/CSS"],
       links: {
-        github: "#",
-        demo: "#",
+        github: "https://github.com/levisrabah/Final-Project-PH4",
+        
       },
     },
     {
-      title: "Portfolio Website",
+      title: "Agriculture Management System",
       description:
-        "A responsive personal portfolio website showcasing my skills, projects, and professional experience with a modern design and dark/light theme toggle.",
+        "Connects farmers with buyers, tracks logistics, and uses blockchain for transparency and insights.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
+      tags: ["Python", "Flask", "PostgreSQL", "Web3.js", "Solidity", "HTML/CSS"],
       links: {
-        github: "#",
-        demo: "#",
+        github: "https://github.com/SARAH-MIGADA-a/agritech-supply-chain",
+        demo: "https://drive.google.com/file/d/19mBZftZNOvow65RRXZJ-01pU7VRB_doo/view?usp=sharing",
       },
     },
   ];
 
   const handleCVDownload = () => {
-    // In a real application, this would be the path to your CV file
-    const cvPath = "/Levis_CV.pdf";
+    // Path to CV in public folder
+    const cvPath = "/Levis%20Otieno%20Rabah%20CV.pdf";
     
     // Create an anchor element and trigger the download
     const link = document.createElement("a");
     link.href = cvPath;
-    link.download = "Levis_CV.pdf";
+    link.download = "Levis Otieno Rabah CV.pdf";
     document.body.appendChild(link);
     
     // Try to download and handle potential errors
@@ -83,7 +83,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* Download CV button - placed at the top of projects section */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center gap-3 mb-12">
           <Button 
             onClick={handleCVDownload} 
             className="group animate-fade-in"
@@ -92,6 +92,14 @@ const ProjectsSection = () => {
             <Download className="mr-2 h-4 w-4 group-hover:translate-y-1 transition-transform duration-300" />
             Download My CV
           </Button>
+          <a
+            href="/Levis%20Otieno%20Rabah%20CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group animate-fade-in px-4 py-2 border border-input rounded-md hover:bg-secondary transition-colors text-sm font-medium"
+          >
+            Preview CV
+          </a>
         </div>
         
         {/* Interactive Carousel for Projects */}
@@ -106,7 +114,7 @@ const ProjectsSection = () => {
                         <img
                           src={project.image}
                           alt={project.title}
-                          className="w-full h-64 object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                          className="w-full h-56 md:h-64 object-cover object-center transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                           <div className="flex gap-4">
@@ -182,7 +190,7 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-64 object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-56 md:h-64 object-cover object-center transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex gap-4">

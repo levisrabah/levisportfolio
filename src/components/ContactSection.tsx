@@ -22,16 +22,23 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    const mailto = `mailto:levisrabah@gmail.com?subject=${subject}&body=${body}`;
+
+    try {
+      window.location.href = mailto;
       toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        title: "Opening your email client...",
+        description: "If nothing happens, please email levisrabah@gmail.com directly.",
       });
+    } finally {
       setFormData({ name: "", email: "", message: "" });
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -58,7 +65,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-muted-foreground">levis@example.com</p>
+                  <p className="text-muted-foreground">levisrabah@gmail.com</p>
                 </div>
               </div>
               
@@ -68,7 +75,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <p className="text-muted-foreground">+254 700 000000</p>
+                  <p className="text-muted-foreground">+254 795 982 921</p>
                 </div>
               </div>
             </div>
@@ -77,7 +84,7 @@ const ContactSection = () => {
               <h4 className="font-medium mb-4">Connect with me</h4>
               <div className="flex gap-4">
                 <a 
-                  href="https://github.com/" 
+                  href="https://github.com/levisrabah" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-secondary hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-colors"
@@ -85,7 +92,7 @@ const ContactSection = () => {
                   <Github className="w-5 h-5" />
                 </a>
                 <a 
-                  href="https://linkedin.com/" 
+                  href="https://linkedin.com/in/levisrabah" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-secondary hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-colors"
@@ -93,7 +100,7 @@ const ContactSection = () => {
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a 
-                  href="mailto:levis@example.com" 
+                  href="mailto:levisrabah@gmail.com" 
                   className="bg-secondary hover:bg-primary text-foreground hover:text-primary-foreground p-3 rounded-full transition-colors"
                 >
                   <Mail className="w-5 h-5" />

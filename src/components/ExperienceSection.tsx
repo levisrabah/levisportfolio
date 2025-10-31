@@ -4,36 +4,44 @@ import { Book, Award } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Software Developer",
-      company: "Vambo AI",
-      period: "2023 - Present",
+      title: "Tech Lead Volunteer",
+      company: "Start Walking Foundation (Remote)",
+      period: "Jun 2025 - Present",
       description:
-        "Working on AI-powered language learning solutions. Developing backend infrastructure and APIs, collaborating with data scientists to implement machine learning models.",
+        "Lead development of digital tools for education and outreach; mentor volunteers; manage website and systems; ensure ethical and privacy standards.",
       type: "work",
     },
     {
-      title: "Full Stack Developer",
-      company: "Freelance Projects",
-      period: "2022 - Present",
+      title: "Developer Relations Advocate Intern",
+      company: "Vambo AI (Remote)",
+      period: "Mar 2025 – Sep 2025",
       description:
-        "Developing custom web applications for various clients. Building responsive frontends with React and robust backends with Python/Flask.",
+        "Grew developer community, created tutorials and sample projects, gathered feedback for product improvements, represented the brand at events, and reported key metrics.",
+      type: "work",
+    },
+    {
+      title: "Web Developer",
+      company: "Glorious-Dawn Montessori School",
+      period: "Sep 2024 – Nov 2024",
+      description:
+        "Enhanced UI/UX, improved backend performance, integrated new features, and strengthened security and maintenance.",
       type: "work",
     },
     {
       title: "Software Engineering",
       company: "Moringa School",
-      period: "2021 - 2022",
+      period: "Completed 08/2024",
       description:
-        "Completed an intensive program focused on full stack development. Built several projects using Python, JavaScript, React, and SQL databases.",
+        "Projects with Python, JavaScript, React, Node, Flask; state management with Redux/Context; databases SQL/Postgres/MySQL; Git and AI tools.",
       type: "education",
     },
     {
-      title: "IT Volunteer",
-      company: "Local Community Center",
-      period: "2020 - 2021",
+      title: "Telecommunication & IT (Ongoing)",
+      company: "Kenyatta University",
+      period: "Expected 2026",
       description:
-        "Provided technical support and taught basic computer skills to community members. Helped set up and maintain the center's network infrastructure.",
-      type: "work",
+        "BSc. Telecommunication and Information Technology: networking, programming, data, telecom, cybersecurity, systems design & integration.",
+      type: "education",
     },
   ];
 
