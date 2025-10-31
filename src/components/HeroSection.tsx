@@ -8,7 +8,6 @@ const HeroSection = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const roles = [
     "Full Stack Software Developer",
-    "Developer Relations Advocate",
     "Backend Developer",
     "Frontend Developer"
   ];
