@@ -22,7 +22,7 @@ npm run dev
 Place screenshots under `public/screenshots/` (create the folder if it doesn't exist), then update the filenames below if needed.
 
 ### Home Page
-![Home Page](public/screenshots/home.png)
+![Home Page](public/screenshots/homepage.png)
 
 ### Resume Section
 ![Resume Section](public/screenshots/resume.png)
